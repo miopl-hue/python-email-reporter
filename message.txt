@@ -1,0 +1,15 @@
+Dear ${PERSON_NAME},
+I am part of a community called Scammer.info that is dedicated to fighting scammers.
+I am emailing you regarding a scam site that is associated with your service.
+
+Domain:
+${DOMAIN_PLACEHOLDER}
+
+Full Link:
+${LINK_PLACEHOLDER}
+
+Screen Shot:
+${SCREENSHOT_URL}
+
+Thank You,
+StopScammersNow2018
