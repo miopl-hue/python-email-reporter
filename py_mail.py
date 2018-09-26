@@ -29,7 +29,7 @@ elif HOSTIN == "namecheap":
   HOST = "abuse@namecheap.com"
 elif HOSTIN == "tektonic":
   HOST = "abuse@tektonic.net"
-elif HOSTIN == "freenom"
+elif HOSTIN == "freenom":
   HOST= "abuse@freenom.com"
 
 def get_contacts(filename):
