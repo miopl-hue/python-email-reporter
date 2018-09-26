@@ -14,7 +14,7 @@ DOMAIN_FINAL=DOMAIN.replace("http", "hxxp")
 FULL_URL=input("Full URL: ")
 FULL_URL_FINAL= FULL_URL.replace("http", "hxxp")
 SCREENSHOT=input("Screen Shot: ")
-HOSTIN=input("Who shall i send the email too? (000webhost, goddaddy, midphase, cloudflare, aws, namecheap, tektonic): ")
+HOSTIN=input("Who shall i send the email too? (000webhost, goddaddy, midphase, cloudflare, aws, namecheap, tektonic, freenom (.tk): ")
 if HOSTIN == "000webhost":
   HOST= "abuse@000webhost.com"
 elif HOSTIN == "godaddy":
@@ -29,6 +29,8 @@ elif HOSTIN == "namecheap":
   HOST = "abuse@namecheap.com"
 elif HOSTIN == "tektonic":
   HOST = "abuse@tektonic.net"
+elif HOSTIN == "freenom"
+  HOST= "abuse@freenom.com"
 
 def get_contacts(filename):
     """
