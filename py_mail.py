@@ -17,6 +17,8 @@ SCREENSHOT=input("Screen Shot: ")
 HOSTIN=input("Who shall i send the email too? (000webhost, goddaddy, midphase, cloudflare, aws, namecheap, tektonic, freenom (.tk, just type freenom): ")
 if HOSTIN == "000webhost":
   HOST= "abuse@000webhost.com"
+elif HOSTIN=="hostinger":
+  HOST="abuse@hostinger.com"
 elif HOSTIN == "godaddy":
   HOST="abuse@godaddy.com"
 elif HOSTIN == "midphase":
