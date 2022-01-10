@@ -11,20 +11,20 @@ PASSWORD = ''
 SUBJECT=input("Subject: ")
 DOMAIN=input("Domain: ")
 DOMAIN_FINAL=DOMAIN.replace("http", "hxxp")
-FULL_URL=input("Full URL: ")
+FULL_URL=input("IP : ")
 FULL_URL_FINAL= FULL_URL.replace("http", "hxxp")
-SCREENSHOT=input("Screen Shot: ")
-HOSTIN=input("Who shall i send the email too? (000webhost, ovh, hostinger, goddaddy, vautron, midphase, cloudflare, aws, namecheap, tektonic, freenom (.tk, just type freenom): ")
+
+HOSTIN=input("Who shall i send the email too? (000webhost, goddaddy, vautron, midphase, cloudflare, aws, namecheap, tektonic, freenom (.tk,ml,ga  just type freenom): ")
 if HOSTIN == "000webhost":
   HOST= "abuse@000webhost.com"
 elif HOSTIN=="hostinger":
   HOST="abuse@hostinger.com"
 elif HOSTIN == "godaddy":
   HOST="abuse@godaddy.com"
-elif HOSTIN == "midphase":
-  HOST="abuse@midphase.com"
 elif HOSTIN == "vautron":
   HOST="abuse@vautron.de"
+elif HOSTIN == "midphase":
+  HOST="abuse@midphase.com"
 elif HOSTIN == "cloudflare":
   HOST="abuse@cloudflare.com"
 elif HOSTIN == "aws":
@@ -35,8 +35,6 @@ elif HOSTIN == "tektonic":
   HOST = "abuse@tektonic.net"
 elif HOSTIN == "freenom":
   HOST= "abuse@freenom.com"
-elif HOSTIN == "ovh":
-  print("Ce domaine appartient à OVH, veuillez le signaler à cette adresse : https://www.ovh.com/abuse/#!/")
 
 def get_contacts(filename):
     """
@@ -63,7 +61,6 @@ def read_template(filename):
     return Template(template_file_content)
 
 def main():
-    names, emails = get_contacts('contacts.txt')
     message_template = read_template('message.txt')
 
     # set up the SMTP server
@@ -76,7 +73,7 @@ def main():
         msg = MIMEMultipart()       # create a message
 
         # add in the actual person name to the message template
-        message = message_template.substitute(PERSON_NAME=HOSTIN, DOMAIN_PLACEHOLDER=DOMAIN_FINAL, LINK_PLACEHOLDER=FULL_URL_FINAL, SCREENSHOT_URL=SCREENSHOT)
+        message = message_template.substitute(PERSON_NAME=HOSTIN, DOMAIN_PLACEHOLDER=DOMAIN_FINAL, LINK_PLACEHOLDER=FULL_URL_FINAL)
 		
         # Prints out the message body for our sake
         print(message)
@@ -97,3 +94,4 @@ def main():
     
 if __name__ == '__main__':
     main()
+
