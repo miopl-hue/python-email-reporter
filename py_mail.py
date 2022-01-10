@@ -37,6 +37,7 @@ elif HOSTIN == "freenom":
   HOST= "abuse@freenom.com"
 elif HOSTIN == "ovh":
   print("Ce domaine appartient à OVH, veuillez le signaler à cette adresse : https://www.ovh.com/abuse/#!/")
+
 def get_contacts(filename):
     """
     Return two lists names, emails containing names and email addresses
