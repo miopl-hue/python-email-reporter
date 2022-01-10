@@ -69,7 +69,7 @@ def main():
     s.login(MY_ADDRESS, PASSWORD)
 
     # For each contact, send the email:
-    for name, email in zip(names, emails):
+    for names, email in zip(names, emails):
         msg = MIMEMultipart()       # create a message
 
         # add in the actual person name to the message template
