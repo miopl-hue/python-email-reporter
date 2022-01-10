@@ -5,8 +5,8 @@ from string import Template
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-MY_ADDRESS = 'stopscammersnow2018@gmail.com'
-PASSWORD = 'stopscam2018'
+MY_ADDRESS = ''
+PASSWORD = ''
 
 SUBJECT=input("Subject: ")
 DOMAIN=input("Domain: ")
@@ -14,7 +14,7 @@ DOMAIN_FINAL=DOMAIN.replace("http", "hxxp")
 FULL_URL=input("Full URL: ")
 FULL_URL_FINAL= FULL_URL.replace("http", "hxxp")
 SCREENSHOT=input("Screen Shot: ")
-HOSTIN=input("Who shall i send the email too? (000webhost, goddaddy, midphase, cloudflare, aws, namecheap, tektonic, freenom (.tk, just type freenom): ")
+HOSTIN=input("Who shall i send the email too? (000webhost, ovh, hostinger, goddaddy, vautron, midphase, cloudflare, aws, namecheap, tektonic, freenom (.tk, just type freenom): ")
 if HOSTIN == "000webhost":
   HOST= "abuse@000webhost.com"
 elif HOSTIN=="hostinger":
@@ -23,6 +23,8 @@ elif HOSTIN == "godaddy":
   HOST="abuse@godaddy.com"
 elif HOSTIN == "midphase":
   HOST="abuse@midphase.com"
+elif HOSTIN == "vautron":
+  HOST="abuse@vautron.de"
 elif HOSTIN == "cloudflare":
   HOST="abuse@cloudflare.com"
 elif HOSTIN == "aws":
@@ -33,7 +35,8 @@ elif HOSTIN == "tektonic":
   HOST = "abuse@tektonic.net"
 elif HOSTIN == "freenom":
   HOST= "abuse@freenom.com"
-
+elif HOSTIN == "ovh":
+  print("Ce domaine appartient à OVH, veuillez le signaler à cette adresse : https://www.ovh.com/abuse/#!/")
 def get_contacts(filename):
     """
     Return two lists names, emails containing names and email addresses
