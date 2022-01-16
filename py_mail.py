@@ -14,7 +14,7 @@ DOMAIN_FINAL=DOMAIN.replace("http", "hxxp")
 FULL_URL=input("IP : ")
 FULL_URL_FINAL= FULL_URL.replace("http", "hxxp")
 
-HOSTIN=input("Who shall i send the email too? (000webhost, goddaddy, vautron, midphase, cloudflare, aws, namecheap, tektonic, freenom (.tk,ml,ga  just type freenom): ")
+HOSTIN=input("Who shall i send the email too? (000webhost, hostinger, goddaddy, vautron, midphase, cloudflare, aws, namecheap, tektonic, freenom (.tk,ml,ga  just type freenom): ")
 if HOSTIN == "000webhost":
   HOST= "abuse@000webhost.com"
 elif HOSTIN=="hostinger":
