@@ -8,8 +8,4 @@ ${DOMAIN_PLACEHOLDER}
 Full Link:
 ${LINK_PLACEHOLDER}
 
-Screen Shot:
-${SCREENSHOT_URL}
-
 Thank You,
-StopScammersNow2018
